@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".delivery.fragments.SelectAddressFragment">
+
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Select Address"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_button_square"
+        android:backgroundTint="@color/light_grey"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Shipping to"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rlHome"
+            android:background="@color/light_grey">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/mrdButtonHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:text="Home"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/txtPhoneNumHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mrdButtonHome"
+                android:layout_marginStart="15dp"
+                android:text="(+1)-409-797-711" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_baseline_edit_24" />
+
+            <TextView
+                android:id="@+id/txtAddressHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtPhoneNumHome"
+                android:layout_marginStart="15dp"
+                android:text="Ontario, Canada"
+
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rlOffice"
+            android:background="@color/light_grey">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/mrdButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:text="Office"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/txtPhoneNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mrdButton"
+                android:layout_marginStart="15dp"
+                android:text="(+1)-408-717-799" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_baseline_edit_24" />
+
+            <TextView
+                android:id="@+id/txtAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtPhoneNum"
+                android:layout_marginStart="15dp"
+                android:text="Barrie, Canada"
+
+                />
+
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnPay"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_button"
+        android:paddingHorizontal="70dp"
+        android:text="Pay"
+        android:textColor="@color/white" />
+
+
+</LinearLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.expert.foodbd.login_sign_up.fragment.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_selectLoginSignUpFragment"
+            app:destination="@id/selectLoginSignUpFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectLoginSignUpFragment"
+        android:name="com.expert.foodbd.login_sign_up.fragment.SelectLoginSignUpFragment"
+        android:label="fragment_select_login_sign_up"
+        tools:layout="@layout/fragment_select_login_sign_up" >
+        <action
+            android:id="@+id/action_selectLoginSignUpFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_selectLoginSignUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.expert.foodbd.login_sign_up.fragment.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_OTPRegisterFragment"
+            app:destination="@id/OTPRegisterFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.expert.foodbd.login_sign_up.fragment.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <deepLink
+            android:id="@+id/deepLink"
+            android:autoVerify="true"
+            app:uri="http://fooddb.com" />
+    </fragment>
+    <fragment
+        android:id="@+id/OTPRegisterFragment"
+        android:name="com.expert.foodbd.login_sign_up.fragment.OTPRegisterFragment"
+        android:label="fragment_otp_register"
+        tools:layout="@layout/fragment_otp_register" >
+        <action
+            android:id="@+id/action_OTPRegisterFragment_to_userVerifiedFragment"
+            app:destination="@id/userVerifiedFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:popUpTo="@id/selectLoginSignUpFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.expert.foodbd.login_sign_up.fragment.ForgotPasswordFragment"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" />
+    <fragment
+        android:id="@+id/userVerifiedFragment"
+        android:name="com.expert.foodbd.delivery.fragments.UserVerifiedFragment"
+        android:label="fragment_user_verified"
+        tools:layout="@layout/fragment_user_verified" >
+        <action
+            android:id="@+id/action_userVerifiedFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/otpLoginFragment"
+        android:name="com.expert.foodbd.login_sign_up.fragment.OtpLoginFragment"
+        android:label="fragment_otp_login"
+        tools:layout="@layout/fragment_otp_login" />
+</navigation>

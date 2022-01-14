@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "King Fries",
+    "price": 80
+  },
+  {
+    "id": 2,
+    "name": "King Peri Peri Fries",
+    "price": 99
+  },
+  {
+    "id": 3,
+    "name": "Cheesy Fries",
+    "price": 42
+  },
+  {
+    "id": 4,
+    "name": "Medium Fries",
+    "price": 31
+  },
+  {
+    "id": 5,
+    "name": "Medium Peri Peri Fries",
+    "price": 63
+  },
+  {
+    "id": 6,
+    "name": "Veggie Strips",
+    "price": 59
+  },
+  {
+    "id": 7,
+    "name": "French Fries",
+    "price": 35
+  },
+  {
+    "id": 8,
+    "name": "Fried Rice",
+    "price": 15
+  }
+]

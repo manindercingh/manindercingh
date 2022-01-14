@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="180dp"
+    android:layout_height="180dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/app_logo"
+            app:civ_border_color="@color/app_color"
+            app:civ_border_width="0.1dp" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llDishName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/txtDishName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img"
+                android:layout_centerHorizontal="true"
+                android:text="Veg Pizza"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtPrice"
+                android:layout_below="@id/img"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_vertical"
+                android:text="15.5"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:drawableStartCompat="@drawable/ic_dollar" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llDishName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="3dp"
+                android:gravity="center"
+                android:text="210 m"
+                android:textColor="@color/red"
+                android:textSize="9sp"
+                app:drawableStartCompat="@drawable/ic_baseline_location_on_24"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:drawablePadding="3dp"
+                android:gravity="center"
+                android:text="210 m"
+                android:textColor="@color/red"
+                android:textSize="9sp"
+                app:drawableStartCompat="@drawable/ic_baseline_star_24"
+                tools:ignore="SmallSp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--        <TextView-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_below="@id/ll"-->
+        <!--            android:layout_centerHorizontal="true"-->
+        <!--            android:layout_marginTop="5dp"-->
+        <!--            android:background="@drawable/bg_button"-->
+        <!--            android:gravity="center_vertical"-->
+        <!--            android:paddingHorizontal="35dp"-->
+        <!--            android:paddingVertical="1dp"-->
+        <!--            android:text="Add"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:textSize="12sp"-->
+        <!--            android:textStyle="bold" />-->
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

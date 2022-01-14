@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Donuts",
+    "price": 40
+  },
+  {
+    "id": 2,
+    "name": "Pizza",
+    "price": 30
+  },
+  {
+    "id": 3,
+    "name": "Burger",
+    "price": 42
+  },
+  {
+    "id": 4,
+    "name": "Noodles",
+    "price": 31
+  },
+  {
+    "id": 5,
+    "name": "Momos",
+    "price": 63
+  },
+  {
+    "id": 6,
+    "name": "Samosa",
+    "price": 59
+  },
+  {
+    "id": 7,
+    "name": "Grilled Patty",
+    "price": 30
+  }
+]

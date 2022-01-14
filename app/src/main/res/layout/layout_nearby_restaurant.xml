@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="240dp"
+    android:layout_height="120dp"
+    android:layout_margin="5dp"
+    android:background="@drawable/bg_button_white"
+    android:elevation="3dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imgRestaurant"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:padding="1dp"
+        android:src="@drawable/img_restaurant_banners"
+        app:riv_border_color="@color/dark_grey"
+        app:riv_border_width="0.1dp"
+        app:riv_corner_radius="15dp" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@id/imgRestaurant"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food DB Restaurant"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="Food DB provides you best  \n services in your area"
+            android:textColor="@color/app_color"
+            android:textSize="9sp" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="400 m"
+                android:textColor="@color/app_color"
+                android:textSize="9sp"
+                app:drawableStartCompat="@drawable/ic_baseline_location_on_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="4.5"
+                android:textColor="@color/app_color"
+                android:textSize="9sp"
+                app:drawableStartCompat="@drawable/ic_baseline_star_24" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</RelativeLayout>

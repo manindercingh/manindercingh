@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="140dp"
+    android:layout_height="160dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginVertical="10dp"
+    android:background="@drawable/bg_button_square"
+    android:backgroundTint="@color/white"
+    android:elevation="5dp">
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="180dp"
+        android:src="@drawable/img_couple_dining" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:elevation="3dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="10dp"
+            android:lineHeight="15px"
+            android:maxLines="2"
+            android:text="Best of \nChandigarh"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/txtPlacesCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="10dp"
+            android:elevation="3dp"
+            android:text="21 places"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/bg_gradient" />
+
+</RelativeLayout>

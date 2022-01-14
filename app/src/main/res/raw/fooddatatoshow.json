@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Pizza 1",
+    "category": "pizza",
+    "price": 40
+  },
+  {
+    "id": 2,
+    "name": "Pizza 2",
+    "category": "pizza",
+    "price": 30
+  },
+  {
+    "id": 3,
+    "name": "Pizza 3",
+    "category": "pizza",
+    "price": 42
+  },
+  {
+    "id": 4,
+    "name": "Pizza 4",
+    "category": "pizza",
+    "price": 31
+  },
+  {
+    "id": 5,
+    "name": "Burger 1",
+    "category": "burger",
+    "price": 63
+  },
+  {
+    "id": 6,
+    "name": "Burger 2",
+    "category": "burger",
+    "price": 59
+  },
+  {
+    "id": 7,
+    "name": "Burger 3",
+    "category": "burger",
+    "price": 30
+  },
+  {
+    "id": 8,
+    "name": "Burger 4",
+    "category": "burger",
+    "price": 30
+  },
+  {
+    "id": 9,
+    "name": "Donut 1",
+    "category": "donut",
+    "price": 30
+  },
+  {
+    "id": 10,
+    "name": "Donut 2",
+    "category": "donut",
+    "price": 30
+  },
+  {
+    "id": 11,
+    "name": "Donut 3",
+    "category": "donut",
+    "price": 30
+  },
+  {
+    "id": 12,
+    "name": "Donut 4",
+    "category": "donut",
+    "price": 30
+  },
+  {
+    "id": 13,
+    "name": "Noodles 1",
+    "category": "noodles",
+    "price": 30
+  },
+  {
+    "id": 14,
+    "name": "Noodles 2",
+    "category": "noodles",
+    "price": 30
+  },
+  {
+    "id": 15,
+    "name": "Noodles 3",
+    "category": "noodles",
+    "price": 30
+  },
+  {
+    "id": 16,
+    "name": "Noodles 4",
+    "category": "noodles",
+    "price": 30
+  }
+]

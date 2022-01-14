@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_payment"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/bg_cardview"
+    android:elevation="5dp"
+    tools:context=".delivery.fragments.SelectAddressFragment">
+
+    <TextView
+        android:id="@+id/txtChooseFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Choose Payment Method"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtChooseFile"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:id="@+id/llGallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center|center_vertical"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+
+            <!--            <ImageView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:src="@drawable/ic_baseline_favorite_24"-->
+            <!--                tools:ignore="ContentDescription" />-->
+
+            <Button
+                android:id="@+id/btnPaytm"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="PayTm"
+                android:textAllCaps="false"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llDocument"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+
+            <!--            <ImageView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:src="@drawable/ic_baseline_local_dining_24"-->
+            <!--                tools:ignore="ContentDescription" />-->
+
+            <Button
+                android:id="@+id/btnDebitCard"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Debit Card"
+                android:textAllCaps="false"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llCOD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+
+            <!--            <ImageView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:src="@drawable/ic_baseline_account_balance_wallet_24"-->
+            <!--                tools:ignore="ContentDescription" />-->
+
+            <Button
+                android:id="@+id/btnCashOnDelivery"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Cash On Delivery"
+                android:textAllCaps="false"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <TextView
+        android:id="@+id/txtCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp"
+        android:text="@string/cancel"
+        android:textAllCaps="true"
+        android:textColor="@color/app_color"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

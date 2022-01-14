@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentProgressFragment">
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/lpIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:indeterminate="true"
+        app:indicatorColor="@color/app_color" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lpIndicator"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:text="Please while while processing \nyour payment"
+        android:textColor="@color/black"
+        android:textSize="17sp" />
+
+
+</RelativeLayout>

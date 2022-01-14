@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/delivery_graph"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Delivery" />
+    <item
+        android:id="@+id/dining_graph"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_local_dining_24"
+        android:title="Dining" />
+    <item
+        android:id="@+id/pro_membership_graph"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_card_membership_24"
+        android:title="Pro" />
+    <item
+        android:id="@+id/wallet_graph"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_account_balance_wallet_24"
+        android:title="Wallet" />
+
+
+</menu>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="2dp"
+    android:layout_marginStart="3dp"
+    android:background="@drawable/bg_button"
+    android:elevation="2dp"
+    android:paddingHorizontal="7dp"
+    android:paddingVertical="2dp">
+
+    <RelativeLayout
+        android:id="@+id/rLayout"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:padding="3dp"
+            android:src="@drawable/ic_leaf" />
+
+        <TextView
+            android:id="@+id/txtDishName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/img"
+            android:text="Pizza"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/imgDown"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/txtDishName"
+            android:src="@drawable/ic_baseline_arrow_drop_down_24"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

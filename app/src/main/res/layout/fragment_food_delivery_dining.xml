@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FoodDeliveryDiningFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rlFadedDialog"
+        android:background="#48000000"
+        android:visibility="gone"
+        android:elevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="65dp"
+            android:background="@drawable/bg_button_square"
+            android:backgroundTint="@color/white"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="80dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMenus"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="vertical"
+                tools:listitem="@layout/layout_dialog_menu_items" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center_vertical">
+
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:src="@drawable/ic_back" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:src="@drawable/ic_baseline_favorite_border_24"
+                app:tint="@color/black" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:src="@drawable/ic_baseline_share_24"
+                app:tint="@color/black" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rlHeader">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Hassan Dhaba" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="North Indian,Chinese,Biryani" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="The Aroma,Sector 22 ,Chandigarh, 4.8km"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15sp"
+                android:orientation="horizontal"
+                android:paddingTop="5dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/bg_txt_ratings"
+                    android:backgroundTint="@color/green_leaf"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    android:paddingHorizontal="7dp"
+                    android:text="3.9"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:drawableEndCompat="@drawable/ic_baseline_star_24"
+                    app:drawableTint="@color/white" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="15dp"
+                    android:src="@drawable/ic_open" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/bg_txt_transparent"
+                    android:backgroundTint="@color/app_color"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="3dp"
+                    android:text="143 Reviews"
+                    android:textSize="13sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_txt_ratings"
+                    android:backgroundTint="@color/light_grey"
+                    android:paddingHorizontal="10dp"
+                    android:text="38 mins"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/bg_txt_ratings"
+                    android:backgroundTint="@color/light_grey"
+                    android:paddingHorizontal="10dp"
+                    android:text="Free Delivery"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_grey">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvTabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/layout_tab_restaurant"
+
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_searchbar">
+
+                <androidx.appcompat.widget.SearchView
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:scrollIndicators="none"
+                    app:defaultQueryHint="Search within the menu"
+                    app:iconifiedByDefault="false" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="25dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Veg"
+                    android:textColor="@color/black" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="25dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Non-Veg"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llFloatingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="35dp"
+        android:background="@drawable/bg_floating_button"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="7dp">
+
+        <ImageView
+            android:id="@+id/icDining"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_baseline_local_dining_24" />
+
+        <ImageView
+            android:id="@+id/icClose"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_baseline_close_24"
+            android:visibility="gone"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Browse Menu"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</RelativeLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/delivery_graph"
+    app:startDestination="@id/deliveryFragment">
+
+    <fragment
+        android:id="@+id/deliveryFragment"
+        android:name="com.expert.foodbd.delivery.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_viewAllListFragment"
+            app:destination="@id/viewAllListFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment2"
+            app:destination="@id/profileFragment2"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_homeFragment_to_dishDetailFragment"
+            app:destination="@id/dishDetailFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_homeFragment_to_filteredDataFragment"
+            app:destination="@id/filteredDataFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/favouritesFragment"
+        android:name="com.expert.foodbd.delivery.fragments.FavouritesFragment"
+        android:label="fragment_favourites"
+        tools:layout="@layout/fragment_favourites" />
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.expert.foodbd.delivery.fragments.NotificationsFragment"
+        android:label="fragment_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.expert.foodbd.delivery.fragments.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/viewAllListFragment"
+        android:name="com.expert.foodbd.delivery.fragments.ViewAllListFragment"
+        android:label="fragment_view_all_list"
+        tools:layout="@layout/fragment_view_all_list">
+        <action
+            android:id="@+id/action_viewAllListFragment_to_dishDetailFragment"
+            app:destination="@id/dishDetailFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment2"
+        android:name="com.expert.foodbd.delivery.profile.fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment2_to_myProfileFragment"
+            app:destination="@id/myProfileFragment2"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/dishDetailFragment"
+        android:name="com.expert.foodbd.delivery.fragments.DishDetailFragment"
+        android:label="fragment_dish_detail"
+        tools:layout="@layout/fragment_dish_detail">
+        <action
+            android:id="@+id/action_dishDetailFragment_to_addItemFragment"
+            app:destination="@id/addItemFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/addItemFragment"
+        android:name="com.expert.foodbd.delivery.fragments.AddItemFragment"
+        android:label="fragment_add_item"
+        tools:layout="@layout/fragment_add_item">
+        <action
+            android:id="@+id/action_addItemFragment_to_selectAddressFragment"
+            app:destination="@id/selectAddressFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectAddressFragment"
+        android:name="com.expert.foodbd.delivery.fragments.SelectAddressFragment"
+        android:label="fragment_select_address"
+        tools:layout="@layout/fragment_select_address">
+        <action
+            android:id="@+id/action_selectAddressFragment_to_paymentProgressFragment"
+            app:destination="@id/paymentProgressFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/myProfileFragment2"
+        android:name="com.expert.foodbd.delivery.fragments.MyProfileFragment"
+        android:label="fragment_my_profile"
+        tools:layout="@layout/fragment_my_profile" />
+    <fragment
+        android:id="@+id/filteredDataFragment"
+        android:name="com.expert.foodbd.delivery.fragments.FilteredDataFragment"
+        android:label="fragment_filtered_data"
+        tools:layout="@layout/fragment_filtered_data">
+        <action
+            android:id="@+id/action_filteredDataFragment_to_dishDetailFragment"
+            app:destination="@id/dishDetailFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentProgressFragment"
+        android:name="com.expert.foodbd.PaymentProgressFragment"
+        android:label="fragment_payment_progress"
+        tools:layout="@layout/fragment_payment_progress">
+        <action
+            android:id="@+id/action_paymentProgressFragment_to_orderPlacedFragment2"
+            app:destination="@id/orderPlacedFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderPlacedFragment"
+        android:name="com.expert.foodbd.OrderPlacedFragment"
+        android:label="fragment_order_placed"
+        tools:layout="@layout/fragment_order_placed" >
+        <action
+            android:id="@+id/action_orderPlacedFragment_to_deliveryFragment"
+            app:destination="@id/deliveryFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@id/deliveryFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dining_graph"
+    app:startDestination="@id/diningHomeFragment">
+
+    <fragment
+        android:id="@+id/diningHomeFragment"
+        android:name="com.expert.foodbd.dining.fragments.DiningHomeFragment"
+        android:label="fragment_dining_home"
+        tools:layout="@layout/fragment_dining_home" >
+        <action
+            android:id="@+id/action_diningHomeFragment_to_popularRestaurantDetailsFragment"
+            app:destination="@id/popularRestaurantDetailsFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/popularRestaurantDetailsFragment"
+        android:name="com.expert.foodbd.PopularRestaurantDetailsFragment"
+        android:label="fragment_popular_restaurant_details"
+        tools:layout="@layout/fragment_popular_restaurant_details" >
+        <action
+            android:id="@+id/action_popularRestaurantDetailsFragment_to_foodDeliveryDiningFragment"
+            app:destination="@id/foodDeliveryDiningFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_popularRestaurantDetailsFragment_to_bookTableFragment"
+            app:destination="@id/bookTableFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodDeliveryDiningFragment"
+        android:name="com.expert.foodbd.FoodDeliveryDiningFragment"
+        android:label="fragment_food_delivery_dining"
+        tools:layout="@layout/fragment_food_delivery_dining" />
+    <fragment
+        android:id="@+id/bookTableFragment"
+        android:name="com.expert.foodbd.BookTableFragment"
+        android:label="fragment_book_table"
+        tools:layout="@layout/fragment_book_table" >
+        <action
+            android:id="@+id/action_bookTableFragment_to_confirmInformationFragment"
+            app:destination="@id/confirmInformationFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmInformationFragment"
+        android:name="com.expert.foodbd.ConfirmInformationFragment"
+        android:label="fragment_confirm_information"
+        tools:layout="@layout/fragment_confirm_information" />
+</navigation>

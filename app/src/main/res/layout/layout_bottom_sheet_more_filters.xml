@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:background="@android:color/transparent"-->
+<!--        android:layout_height="80dp">-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="25dp"-->
+<!--            android:src="@drawable/ic_leaf"-->
+<!--            android:layout_height="25dp"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            />-->
+
+<!--    </RelativeLayout>-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="More Filters"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/grey" />
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:gravity="center_vertical"
+        android:layoutDirection="rtl"
+        android:text="Under 30 Mins"
+        android:textSize="13sp" />
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:gravity="center_vertical"
+        android:layoutDirection="rtl"
+        android:text="Previously Ordered"
+        android:textSize="13sp" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginVertical="20dp"
+        android:background="@color/grey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/txtClearAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Clear All"
+            android:textSize="13sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginVertical="5dp"
+            android:layout_weight="2"
+            android:background="@drawable/bg_button_app"
+            android:padding="5dp"
+            android:text="Apply"
+            android:textAllCaps="false"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

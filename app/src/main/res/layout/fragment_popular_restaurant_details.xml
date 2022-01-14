@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PopularRestaurantDetailsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center_vertical">
+
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:src="@drawable/ic_back" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:scaleX="-1"
+                android:src="@drawable/ic_baseline_add_a_photo_24"
+                app:tint="@color/black" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:src="@drawable/ic_baseline_favorite_border_24"
+                app:tint="@color/black" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:src="@drawable/ic_baseline_share_24"
+                app:tint="@color/black" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15sp"
+                android:layout_marginTop="15sp"
+                android:text="The Aroma"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="North Indian,Chinese,Biryani" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="The Aroma,Sector 22 ,Chandigarh, 4.8km"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15sp"
+                android:orientation="horizontal"
+                android:paddingTop="5dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/bg_txt_ratings"
+                    android:backgroundTint="@color/green_leaf"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    android:paddingHorizontal="7dp"
+                    android:text="3.9"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:drawableEndCompat="@drawable/ic_baseline_star_24"
+                    app:drawableTint="@color/white" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="15dp"
+                    android:src="@drawable/ic_open" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/bg_txt_transparent"
+                    android:backgroundTint="@color/app_color"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="3dp"
+                    android:text="143 Reviews"
+                    android:textSize="13sp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_marginVertical="15dp"
+                android:background="@color/light_grey" />
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="3dp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:id="@+id/rlBookTable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_cardview_ripple">
+
+                    <ImageView
+                        android:id="@+id/icDining"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15sp"
+                        android:src="@drawable/ic_dining_table" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/icDining"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Book a table"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Book a table"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/ic_next" />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="3dp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:id="@+id/rlFoodDelivery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_cardview_ripple">
+
+                    <ImageView
+                        android:id="@+id/icScooter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15sp"
+                        android:layout_marginTop="15sp"
+                        android:layout_marginEnd="15sp"
+                        android:layout_marginBottom="15sp"
+                        android:src="@drawable/ic_scooter" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/icScooter"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Food Delivery"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="in 37 mins"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/ic_next" />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_marginVertical="15dp"
+                android:background="@color/light_grey" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="10dp"
+                android:text="About the restaurant" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_marginVertical="15dp"
+                android:background="@color/light_grey" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/icTimer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:src="@drawable/ic_baseline_timer_24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/icTimer"
+                        android:gravity="center_vertical"
+                        android:text="8am - 12 midnight (Today)"
+                        android:textSize="12sp"
+                        app:drawableEndCompat="@drawable/ic_baseline_arrow_drop_down_24" />
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:padding="15dp"
+                        android:src="@drawable/ic_phone" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/icTimer2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:src="@drawable/ic_dollar" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="55dp"
+                        android:layout_toEndOf="@id/icTimer2"
+                        android:gravity="center_vertical"
+                        android:text="$ 1000 for two | $200 for a pint of beer (approx.)"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/icTimer3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:src="@drawable/ic_locations" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/imgDirection"
+                        android:layout_toEndOf="@id/icTimer3"
+                        android:gravity="center_vertical"
+                        android:maxLines="2"
+                        android:text="4.8 kms | 1052 &amp; 1053,Sector 22B,Opposite Side Sector 17,Chandigarh"
+                        android:textSize="12sp" />
+
+
+                    <ImageView
+                        android:id="@+id/imgDirection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:padding="15dp"
+                        android:src="@drawable/ic_baseline_directions_24" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/icTimer4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:src="@drawable/ic_serve" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="55dp"
+                        android:layout_toEndOf="@id/icTimer4"
+                        android:gravity="center_vertical"
+                        android:text="Serves North Indian,Chinese, Biryani +4 more" />
+
+
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@color/light_grey" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="Menu"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="Full Menu"
+                android:textAllCaps="true"
+                android:textColor="@color/dark_grey" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvRestaurantFoodMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/layout_restaurant_food_menu" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginHorizontal="15dp"
+                android:background="@color/light_grey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:text="See Full Menu"
+                android:textColor="@color/app_color" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_marginVertical="15dp"
+                android:background="@color/light_grey" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="More info"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="5dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:gravity="start|center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="Breakfast"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:drawableStartCompat="@drawable/ic_tick"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:gravity="start|center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="Home Delivery"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:drawableStartCompat="@drawable/ic_tick"
+                    tools:ignore="RtlSymmetry" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="5dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:gravity="start|center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="Free Parking"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:drawableStartCompat="@drawable/ic_tick"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:gravity="start|center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="Indoor Seating"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:drawableStartCompat="@drawable/ic_tick"
+                    tools:ignore="RtlSymmetry" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="5dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:gravity="start|center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="Takeaway Available"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:drawableStartCompat="@drawable/ic_tick"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:gravity="start|center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="Full Bar Available"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:drawableStartCompat="@drawable/ic_tick"
+                    tools:ignore="RtlSymmetry" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="5dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:gravity="start|center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="Table Booking"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:drawableStartCompat="@drawable/ic_tick"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:gravity="start|center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="Desserts and Bakes"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:drawableStartCompat="@drawable/ic_tick"
+                    tools:ignore="RtlSymmetry" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="5dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:gravity="start|center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="Breakfast"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:drawableStartCompat="@drawable/ic_tick"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:gravity="start|center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="Home Delivery"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:drawableStartCompat="@drawable/ic_tick"
+                    tools:ignore="RtlSymmetry" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginHorizontal="15dp"
+                android:background="@color/light_grey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:text="See all"
+                android:textColor="@color/app_color" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@color/light_grey" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="Found an error in the information? Help us rectify it."
+                    android:textColor="@color/dark_grey"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="Report Error"
+                    android:textColor="@color/app_color"
+                    android:textSize="12sp" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_marginVertical="15dp"
+                android:background="@color/light_grey" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="What people say"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="See all"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="review highlights"
+                android:textAllCaps="true"
+                android:textColor="@color/dark_grey" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvReviewTags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/layout_review_tags" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RECENT REVIEWS" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvReview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/layout_review" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/light_grey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:text="Write a review"
+                android:textColor="@color/app_color" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_marginVertical="15dp"
+                android:background="@color/light_grey" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Similar Restaurants"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSimilarRestaurant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/layout_similar_restaurant" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>
