@@ -47,8 +47,8 @@ dependencies {
     def nav_version = "2.3.5"
 
     implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.4.0'
-    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
@@ -60,9 +60,9 @@ dependencies {
 //    Firebase Kotlin
 //    Lotte Animations
     def lottieVersion = "3.4.0"
-    implementation "com.airbnb.android:lottie:$lottieVersion"
+    implementation "com.airbnb.android:lottie:3.4.1"
     implementation platform('com.google.firebase:firebase-bom:29.0.1')
-    implementation 'com.google.android.gms:play-services-safetynet:18.0.0'
+    implementation 'com.google.android.gms:play-services-safetynet:18.0.1'
     implementation 'com.google.firebase:firebase-auth:21.0.1'
     implementation 'com.google.firebase:firebase-analytics-ktx'
 
@@ -93,11 +93,14 @@ dependencies {
     //firebase storage
     implementation 'com.google.firebase:firebase-storage:20.0.0'
 
-//Glide
+//  Glide
     implementation 'com.github.bumptech.glide:glide:4.12.0'
 
-//    implementation 'com.github.rowthtechs:scaler.io:0.1.2'
+//  implementation 'com.github.rowthtechs:scaler.io:0.1.2'
 
-//    like button with animation
+//  like button with animation
     implementation 'com.github.jd-alexander:LikeButton:0.2.3'
+
+//  ccp
+    implementation 'com.github.joielechong:countrycodepicker:2.4.2'
 }

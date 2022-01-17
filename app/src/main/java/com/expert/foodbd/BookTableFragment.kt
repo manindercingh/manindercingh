@@ -39,6 +39,7 @@ class BookTableFragment : Fragment(), DaysDiningAdapter.Days, PeopleDiningAdapte
             binding.root.findNavController()
                 .navigate(R.id.action_bookTableFragment_to_confirmInformationFragment)
 
+
         }
 
     }

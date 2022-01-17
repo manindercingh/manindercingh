@@ -1,59 +1,242 @@
 package com.expert.foodbd
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.text.Editable
+import android.text.TextUtils
+import android.text.TextWatcher
+import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.fragment.app.Fragment
+import com.expert.foodbd.databinding.FragmentConfirmInformationBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [ConfirmInformationFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ConfirmInformationFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private var _binding: FragmentConfirmInformationBinding? = null
+    private val binding get() = _binding!!
+    private var firstNameCheck: String = ""
+    private var lastNameCheck: String = ""
+    private var emailIDCheck: String = ""
+    private var phoneCheck: String = ""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_confirm_information, container, false)
+    ): View {
+        _binding = FragmentConfirmInformationBinding.inflate(layoutInflater, container, false)
+
+        textWatcher()
+        setClicks()
+
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ConfirmInformationFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ConfirmInformationFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    private fun textWatcher() {
+
+        val emailPattern = Regex("""\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}""")
+        val namePattern = Regex("^[A-Za-z]+$")
+
+        binding.edtFirstName.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+
             }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+
+                val firstname: String = binding.edtFirstName.text.toString()
+
+                if (!firstname.matches(namePattern)) {
+
+                    binding.edtFirstName.error = "not a valid name"
+                    firstNameCheck = ""
+
+                } else if (firstname.length > 20) {
+
+                    binding.edtFirstName.error = "name is too long"
+                    firstNameCheck = ""
+
+                } else if (firstname.contains(" ")) {
+                    binding.edtFirstName.error = "not a valid name"
+                    firstNameCheck = ""
+                } else {
+
+                    firstNameCheck = "done"
+
+                }
+
+
+            }
+
+        })
+
+        binding.edtLastName.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+
+                val lastName: String = binding.edtLastName.text.toString().trim()
+
+                if (!lastName.matches(namePattern)) {
+
+                    binding.edtLastName.error = "not a valid name"
+                    lastNameCheck = ""
+
+                } else if (lastName.length > 25) {
+                    binding.edtLastName.error = "Name is too long"
+                    lastNameCheck = ""
+
+                } else if (lastName.contains(" ")) {
+                    binding.edtLastName.error = "not a valid name"
+                    lastNameCheck = ""
+                } else {
+                    lastNameCheck = "done"
+                }
+
+
+            }
+
+        })
+
+        binding.edtEmail.addTextChangedListener(object : TextWatcher {
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+
+
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+
+                val email = binding.edtEmail.text.toString().trim()
+
+
+                if (!email.matches(emailPattern)) {
+
+                    binding.edtEmail.error = "not a valid email"
+                    emailIDCheck = ""
+
+                } else if (email.length > 50) {
+
+                    binding.edtEmail.error = "email is too long"
+                    emailIDCheck = ""
+
+                } else if (email.contains(" ")) {
+                    binding.edtEmail.error = "not a valid email"
+                    emailIDCheck = ""
+                } else {
+                    emailIDCheck = "done"
+                }
+
+
+            }
+
+        })
+
+        binding.edtPhone.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+
+                val strPhone = binding.edtPhone.text.toString()
+
+                if (strPhone.length > 12) {
+                    binding.edtPhone.error = "phone number is too long"
+                    phoneCheck = ""
+                } else if (!isValidPhone(strPhone)) {
+
+                    binding.edtPhone.error = "not a valid phone number"
+                    phoneCheck = ""
+
+                } else if (strPhone.contains(" ")) {
+                    binding.edtPhone.error = "not a valid phone number"
+                    phoneCheck = ""
+
+                } else {
+                    phoneCheck = "done"
+                }
+
+
+            }
+
+        })
+
+    }
+
+    fun isValidPhone(target: CharSequence?): Boolean {
+        return !TextUtils.isEmpty(target) && Patterns.PHONE.matcher(target).matches()
+    }
+
+    private fun setClicks() {
+
+        val emailPattern = Regex("""\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}""")
+        val name = Regex("^[A-Za-z]+$")
+        val phone = Regex("@\"(?<!\\d)\\d{10}(?!\\d)\"")
+
+        binding.imgBack.setOnClickListener { requireActivity().onBackPressed() }
+
+        binding.btnSavChanges.setOnClickListener {
+
+            if (emailIDCheck == "" || lastNameCheck == "" || firstNameCheck == "" || phoneCheck == "") {
+                Toast.makeText(requireContext(), "please check your all fields", Toast.LENGTH_SHORT)
+                    .show()
+
+            } else {
+                Toast.makeText(requireContext(), "done", Toast.LENGTH_SHORT).show()
+            }
+
+//            if (!binding.edtFirstName.text.toString().trim().matches(name)) {
+//                Toast.makeText(requireContext(), "Not a Valid Name", Toast.LENGTH_SHORT).show()
+//            } else if (!binding.edtLastName.text.toString().trim().matches(name)) {
+//                Toast.makeText(requireContext(), "Not a Valid Name", Toast.LENGTH_SHORT).show()
+//            } else if (binding.edtFirstName.text.toString()
+//                    .trim().length > 25 || binding.edtLastName.text.toString()
+//                    .trim().length > 25 || binding.edtLastName.text.toString().trim().length > 25
+//            ) {
+//                Toast.makeText(requireContext(), "Name is too long", Toast.LENGTH_SHORT).show()
+//            } else if (!binding.edtEmail.text.toString().trim().matches(emailPattern)) {
+//                Toast.makeText(requireContext(), "Not a Valid Email", Toast.LENGTH_SHORT).show()
+//            } else if (binding.edtEmail.text.toString().trim().length > 60) {
+//                Toast.makeText(requireContext(), "Email is too long", Toast.LENGTH_SHORT).show()
+////            } else if (!isValidPhone(binding.edtPhone.text.toString().trim()) || binding.edtPhone.text.toString().trim().length < 9) {
+
+//            } else if (binding.edtPhone.text.toString().trim()
+//                    .matches(phone) || binding.edtPhone.text.toString()
+//                    .trim().length < 9 || binding.edtPhone.text.toString().trim().contains(" ")
+//            ) {
+//                Toast.makeText(requireContext(), "Not a valid phone", Toast.LENGTH_SHORT).show()
+//            } else if (binding.edtPhone.text.toString().trim().length > 12) {
+//                Toast.makeText(requireContext(), "Phone number is too long", Toast.LENGTH_SHORT)
+//                    .show()
+//            } else {
+//                Toast.makeText(requireContext(), "Done", Toast.LENGTH_SHORT).show()
+//            }
+
+        }
+
     }
 }
