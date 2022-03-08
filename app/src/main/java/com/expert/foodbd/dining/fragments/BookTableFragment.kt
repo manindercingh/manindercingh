@@ -1,4 +1,4 @@
-package com.expert.foodbd
+package com.expert.foodbd.dining.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.expert.foodbd.R
 import com.expert.foodbd.databinding.FragmentBookTableBinding
 import com.expert.foodbd.dining.adapters.DaysDiningAdapter
 import com.expert.foodbd.dining.adapters.PeopleDiningAdapter
@@ -39,8 +40,9 @@ class BookTableFragment : Fragment(), DaysDiningAdapter.Days, PeopleDiningAdapte
             binding.root.findNavController()
                 .navigate(R.id.action_bookTableFragment_to_confirmInformationFragment)
 
-
         }
+
+        binding.imgBack.setOnClickListener { requireActivity().onBackPressed() }
 
     }
 

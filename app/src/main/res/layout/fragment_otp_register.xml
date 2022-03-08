@@ -30,7 +30,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
-        android:text="Type the verification code \n we've sent you" />
+        android:id="@+id/txtTitle"
+        android:text="Type the verification code \n we've sent you on" />
 
     <in.aabhasjindal.otptextview.OtpTextView
         android:id="@+id/otp_view"

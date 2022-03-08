@@ -44,6 +44,8 @@ class SelectAddressFragment : Fragment() {
             showBottomSheet()
         }
 
+        binding.imgBack.setOnClickListener { requireActivity().onBackPressed() }
+
     }
 
     private fun showBottomSheet() {

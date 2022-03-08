@@ -1,18 +1,17 @@
-package com.expert.foodbd
+package com.expert.foodbd.delivery.fragments
 
+import android.animation.TimeInterpolator
 import android.os.Bundle
 import android.os.Handler
-import androidx.fragment.app.Fragment
+import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.app.NotificationCompat.getVisibility
-import androidx.navigation.findNavController
-import com.expert.foodbd.databinding.FragmentOrderPlacedBinding
-import android.animation.TimeInterpolator
-import android.view.KeyEvent
 import android.widget.Toast
-
+import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
+import com.expert.foodbd.R
+import com.expert.foodbd.databinding.FragmentOrderPlacedBinding
 
 class OrderPlacedFragment : Fragment() {
     private var _binding: FragmentOrderPlacedBinding? = null
@@ -20,26 +19,22 @@ class OrderPlacedFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = FragmentOrderPlacedBinding.inflate(layoutInflater, container, false)
         onBackButtonPressed()
-        val FREQ = 3f
-        val DECAY = 2f
-        // interpolator that goes 1 -> -1 -> 1 -> -1 in a sine wave pattern.
-        // interpolator that goes 1 -> -1 -> 1 -> -1 in a sine wave pattern.
+        val freq = 3f
+        val decay = 2
         val decayingSineWave = TimeInterpolator { input ->
-            val raw = Math.sin(FREQ * input * 2 * Math.PI)
-            (raw * Math.exp((-input * DECAY).toDouble())).toFloat()
+            val raw = Math.sin(freq * input * 2 * Math.PI)
+            (raw * Math.exp((-input * decay).toDouble())).toFloat()
         }
 
-        val FREQ2 = 3f
-        val DECAY2 = 2f
-        // interpolator that goes 1 -> -1 -> 1 -> -1 in a sine wave pattern.
-        // interpolator that goes 1 -> -1 -> 1 -> -1 in a sine wave pattern.
+        val freq2 = 3f
+        val decay2 = 2f
         val decayingSineWave2 = TimeInterpolator { input ->
-            val raw = Math.sin(FREQ2 * input * 2 * Math.PI)
-            (raw * Math.exp((-input * DECAY2).toDouble())).toFloat()
+            val raw = Math.sin(freq2 * input * 2 * Math.PI)
+            (raw * Math.exp((-input * decay2).toDouble())).toFloat()
         }
 
         Handler().postDelayed({
@@ -86,8 +81,8 @@ class OrderPlacedFragment : Fragment() {
     private fun onBackButtonPressed() {
         binding.root.isFocusableInTouchMode = true
         binding.root.requestFocus()
-        binding.root.setOnKeyListener(View.OnKeyListener { view, i, keyEvent ->
-            if (keyEvent.action === KeyEvent.ACTION_DOWN) {
+        binding.root.setOnKeyListener(View.OnKeyListener { _, i, keyEvent ->
+            if (keyEvent.action == KeyEvent.ACTION_DOWN) {
                 if (i == KeyEvent.KEYCODE_BACK) {
 
                     binding.root.findNavController()

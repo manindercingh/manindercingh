@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.expert.foodbd.GroupModel
+import com.expert.foodbd.delivery.models.GroupModel
 import com.expert.foodbd.databinding.FragmentFilteredDataBinding
 import com.expert.foodbd.delivery.activity.HomeActivity
 import com.expert.foodbd.delivery.adapters.FilteredFoodsAdapters
@@ -27,11 +27,19 @@ class FilteredDataFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = FragmentFilteredDataBinding.inflate(layoutInflater, container, false)
 
+        setClicks()
+
         return binding.root
+    }
+
+    private fun setClicks() {
+
+        binding.imgBack.setOnClickListener { requireActivity().onBackPressed() }
+
     }
 
     override fun onResume() {

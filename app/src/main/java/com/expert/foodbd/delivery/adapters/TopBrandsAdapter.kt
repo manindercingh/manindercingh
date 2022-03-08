@@ -1,4 +1,4 @@
-package com.expert.foodbd
+package com.expert.foodbd.delivery.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

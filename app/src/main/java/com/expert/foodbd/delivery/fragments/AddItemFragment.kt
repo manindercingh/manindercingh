@@ -36,6 +36,8 @@ class AddItemFragment : Fragment() {
                 .navigate(R.id.action_addItemFragment_to_selectAddressFragment)
         }
 
+        binding.imgBack.setOnClickListener { requireActivity().onBackPressed() }
+
     }
 
     @SuppressLint("SetTextI18n")

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".PopularRestaurantDetailsFragment">
+    tools:context=".dining.fragments.PopularRestaurantDetailsFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"

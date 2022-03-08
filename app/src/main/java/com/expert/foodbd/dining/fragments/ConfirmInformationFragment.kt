@@ -1,4 +1,4 @@
-package com.expert.foodbd
+package com.expert.foodbd.dining.fragments
 
 import android.os.Bundle
 import android.text.Editable
@@ -11,7 +11,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.expert.foodbd.databinding.FragmentConfirmInformationBinding
-
 
 class ConfirmInformationFragment : Fragment() {
     private var _binding: FragmentConfirmInformationBinding? = null
@@ -63,8 +62,10 @@ class ConfirmInformationFragment : Fragment() {
                     firstNameCheck = ""
 
                 } else if (firstname.contains(" ")) {
+
                     binding.edtFirstName.error = "not a valid name"
                     firstNameCheck = ""
+
                 } else {
 
                     firstNameCheck = "done"

@@ -61,6 +61,7 @@
                 android:src="@drawable/img_profile" />
 
             <TextView
+                android:id="@+id/txtUserName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -169,7 +170,8 @@
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="5dp"
                     android:textSize="0sp"
-                    app:colorOn="@color/red"
+                    app:colorOff="@color/light_grey"
+                    app:colorOn="@color/app_color"
                     app:on="true" />
 
             </RelativeLayout>
@@ -281,8 +283,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginHorizontal="40dp"
-                android:layout_marginTop="35dp"
-                android:layout_marginBottom="3dp"
+                android:layout_marginVertical="35dp"
                 android:background="@drawable/bg_button"
                 android:gravity="center"
                 android:text="Log Out"

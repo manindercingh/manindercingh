@@ -1,4 +1,4 @@
-package com.expert.foodbd
+package com.expert.foodbd.delivery.fragments
 
 import android.os.Bundle
 import android.os.Handler
@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
+import com.expert.foodbd.R
 import com.expert.foodbd.databinding.FragmentPaymentProgressBinding
 
 

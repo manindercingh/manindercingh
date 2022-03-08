@@ -1,5 +1,6 @@
 package com.expert.foodbd.login_sign_up.fragment
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -31,6 +32,7 @@ class OTPRegisterFragment : Fragment() {
     private lateinit var reference: DatabaseReference
     private lateinit var firebaseAuth: FirebaseAuth
 
+    @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -40,6 +42,9 @@ class OTPRegisterFragment : Fragment() {
 
         firebaseAuth = FirebaseAuth.getInstance()
         reference = FirebaseDatabase.getInstance().reference
+
+        binding.txtTitle.text =
+            "Type the verification code \\n we've sent you on ${MainActivity.phoneNum}"
 
         setClicks()
 
@@ -82,6 +87,12 @@ class OTPRegisterFragment : Fragment() {
 
                                 binding.root.findNavController()
                                     .navigate(R.id.action_OTPRegisterFragment_to_userVerifiedFragment)
+
+                                Toast.makeText(
+                                    requireContext(),
+                                    "Welcome ${MainActivity.name}",
+                                    Toast.LENGTH_SHORT
+                                ).show()
 
 
                             } else {

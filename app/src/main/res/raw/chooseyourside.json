@@ -1,12 +1,259 @@
-[
-  {
-    "id": 1,
-    "name": "Double Cheese Slice",
-    "price": 10
-  },
-  {
-    "id": 2,
-    "name": "Extra Cheese",
-    "price": 5
+{
+  "menu": {
+    "data" :[
+      {
+        "Recommended": [
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "0"
+          },
+          {
+            "name": "Idli (2 Pieces)",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "0"
+          },
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "0"
+          }
+        ],
+
+        "Soups": [
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "0"
+          },
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "1"
+          },
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "0"
+          }
+        ],
+
+        "Platters": [
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "1"
+          },
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "0"
+          },
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "0"
+          }
+        ],
+
+        "Appetizers": [
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "1"
+          },
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "1"
+          },
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "0"
+          }
+        ],
+
+        "Main Course": [
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "0"
+          },
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "1"
+          },
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "1"
+          }
+        ],
+
+        "Breads": [
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "1"
+          },
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "1"
+          },
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "0"
+          }
+        ],
+
+        "Rice and Biryani": [
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "0"
+          },
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "0"
+          },
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "1"
+          }
+        ],
+
+        "Fried Rice And Noodles": [
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "1"
+          },
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "0"
+          },
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "0"
+          }
+        ],
+
+        "Pasta": [
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "0"
+          },
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "0"
+          },
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "1"
+          }
+        ],
+
+        "Snacks": [
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "1"
+          },
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "1"
+          },
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "0"
+          }
+        ],
+
+        "Accompaniments": [
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "0"
+          },
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "0"
+          },
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "1"
+          }
+        ],
+
+        "Desserts": [
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "1"
+          },
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "1"
+          },
+          {
+            "name": "1 Masala Dosa",
+            "price": "172",
+            "ratings": "3.5",
+            "like": "1"
+          }
+        ]
+      }
+    ]
   }
-]
+}

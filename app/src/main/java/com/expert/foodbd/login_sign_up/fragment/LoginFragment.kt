@@ -15,19 +15,19 @@ import androidx.navigation.findNavController
 import com.expert.foodbd.R
 import com.expert.foodbd.databinding.FragmentLoginBinding
 import com.expert.foodbd.delivery.activity.HomeActivity
+import com.expert.foodbd.utils.App
+import com.expert.foodbd.utils.AppConstants
 
 
 class LoginFragment : Fragment() {
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
-    private var strCheck: String = ""
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
-
 
         setClicks()
         textLive()
@@ -36,16 +36,24 @@ class LoginFragment : Fragment() {
 
     }
 
+    fun isValidPhone(target: CharSequence?): Boolean {
+        return !TextUtils.isEmpty(target) && Patterns.PHONE.matcher(target).matches()
+    }
+
     private fun textLive() {
 
         binding.edtEmail.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
 
-                val strEmail: String = binding.edtEmail.text.toString()
+                val strEmail: String = "+91" + binding.edtEmail.text.toString()
 
                 val phonePattern = Regex("^[+][0-9]{10,13}\$")
 
                 if (!strEmail.matches(phonePattern)) {
+
+                    binding.txtEmailError.visibility = View.VISIBLE
+
+                } else if (!isValidPhone(strEmail)) {
 
                     binding.txtEmailError.visibility = View.VISIBLE
 
@@ -124,6 +132,8 @@ class LoginFragment : Fragment() {
                 ).show()
 
             } else {
+
+                App.sharedPref?.saveString(AppConstants.isLogin, "yes")
 
                 val intent = Intent(requireContext(), HomeActivity::class.java)
                 startActivity(intent)

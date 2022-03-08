@@ -138,7 +138,7 @@
     </fragment>
     <fragment
         android:id="@+id/paymentProgressFragment"
-        android:name="com.expert.foodbd.PaymentProgressFragment"
+        android:name="com.expert.foodbd.delivery.fragments.PaymentProgressFragment"
         android:label="fragment_payment_progress"
         tools:layout="@layout/fragment_payment_progress">
         <action
@@ -151,7 +151,7 @@
     </fragment>
     <fragment
         android:id="@+id/orderPlacedFragment"
-        android:name="com.expert.foodbd.OrderPlacedFragment"
+        android:name="com.expert.foodbd.delivery.fragments.OrderPlacedFragment"
         android:label="fragment_order_placed"
         tools:layout="@layout/fragment_order_placed" >
         <action

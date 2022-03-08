@@ -1,4 +1,4 @@
-package com.expert.foodbd
+package com.expert.foodbd.delivery.models
 
 import com.google.gson.annotations.SerializedName
 

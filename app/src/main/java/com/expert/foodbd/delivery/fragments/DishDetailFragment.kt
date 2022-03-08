@@ -11,7 +11,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import com.expert.foodbd.GroupModel
+import com.expert.foodbd.delivery.models.GroupModel
 import com.expert.foodbd.R
 import com.expert.foodbd.databinding.FragmentDishDetailBinding
 import com.expert.foodbd.delivery.activity.HomeActivity

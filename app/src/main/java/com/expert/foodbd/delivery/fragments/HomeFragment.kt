@@ -1,8 +1,10 @@
 package com.expert.foodbd.delivery.fragments
 
 import android.annotation.SuppressLint
+import android.app.AlertDialog
 import android.content.ContentValues
 import android.content.Context
+import android.content.DialogInterface
 import android.net.wifi.WifiManager
 import android.os.Build
 import android.os.Bundle
@@ -13,18 +15,23 @@ import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.TranslateAnimation
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import com.expert.foodbd.GroupModel
-import com.expert.foodbd.databinding.FragmentHomeBinding
-import com.expert.foodbd.databinding.LayoutBottomSheetCuisinesBinding
-import com.expert.foodbd.databinding.LayoutBottomSheetMoreFiltersBinding
-import com.expert.foodbd.databinding.LayoutBottomSheetRelevanceBinding
+import com.expert.foodbd.R
+import com.expert.foodbd.databinding.*
 import com.expert.foodbd.delivery.activity.HomeActivity.Companion.CATEGORY_OBJECT
+import com.expert.foodbd.delivery.activity.HomeActivity.Companion.FOOD_MAKES_YOU_HAPPY_COUNT
+import com.expert.foodbd.delivery.adapters.*
+import com.expert.foodbd.delivery.models.GroupModel
+import com.expert.foodbd.utils.CommonUtils
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import org.json.JSONArray
 import org.json.JSONException
 import java.io.BufferedReader
@@ -33,15 +40,6 @@ import java.io.InputStream
 import java.io.InputStreamReader
 import java.util.*
 import kotlin.collections.ArrayList
-import com.expert.foodbd.R
-import com.expert.foodbd.TopBrandsAdapter
-import android.view.animation.TranslateAnimation
-import com.expert.foodbd.delivery.activity.HomeActivity.Companion.FOOD_MAKES_YOU_HAPPY_COUNT
-import com.expert.foodbd.delivery.adapters.*
-import com.expert.foodbd.utils.CommonUtils
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.ValueEventListener
 
 
 class HomeFragment : Fragment(), CategoryFilterAdapter.OnCliQ {
@@ -233,7 +231,7 @@ class HomeFragment : Fragment(), CategoryFilterAdapter.OnCliQ {
         binding.root.setOnKeyListener(View.OnKeyListener { view, i, keyEvent ->
             if (keyEvent.action == KeyEvent.ACTION_DOWN) {
                 if (i == KeyEvent.KEYCODE_BACK) {
-                    requireActivity().finish()
+                    exitApp()
 
                     return@OnKeyListener true
                 }
@@ -241,6 +239,24 @@ class HomeFragment : Fragment(), CategoryFilterAdapter.OnCliQ {
             false
         })
     }
+
+
+    private fun exitApp() {
+        val builder1 = AlertDialog.Builder(context)
+        builder1.setTitle("Exit")
+        builder1.setMessage("Are you sure you want to exit ?")
+        builder1.setCancelable(false)
+        builder1.setPositiveButton("Exit") { dialog, _ ->
+            dialog.cancel()
+            requireActivity().finishAffinity()
+        }
+        builder1.setNegativeButton(
+            "Cancel"
+        ) { dialog: DialogInterface, _: Int -> dialog.cancel() }
+        val alert11 = builder1.create()
+        alert11.show()
+    }
+
 
     @SuppressLint("NotifyDataSetChanged")
     private fun setClicks() {

@@ -33,7 +33,7 @@ class PopularRestaurantsAdapter(val click: Click, val context: Context) :
     }
 
     override fun getItemCount(): Int {
-        return 4
+        return 10
     }
 
 }

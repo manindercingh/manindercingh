@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/dining_graph"
-    app:startDestination="@id/bookTableFragment">
+    app:startDestination="@id/diningHomeFragment">
 
     <fragment
         android:id="@+id/diningHomeFragment"
@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/popularRestaurantDetailsFragment"
-        android:name="com.expert.foodbd.PopularRestaurantDetailsFragment"
+        android:name="com.expert.foodbd.dining.fragments.PopularRestaurantDetailsFragment"
         android:label="fragment_popular_restaurant_details"
         tools:layout="@layout/fragment_popular_restaurant_details" >
         <action
@@ -40,12 +40,12 @@
     </fragment>
     <fragment
         android:id="@+id/foodDeliveryDiningFragment"
-        android:name="com.expert.foodbd.FoodDeliveryDiningFragment"
+        android:name="com.expert.foodbd.dining.fragments.FoodDeliveryDiningFragment"
         android:label="fragment_food_delivery_dining"
         tools:layout="@layout/fragment_food_delivery_dining" />
     <fragment
         android:id="@+id/bookTableFragment"
-        android:name="com.expert.foodbd.BookTableFragment"
+        android:name="com.expert.foodbd.dining.fragments.BookTableFragment"
         android:label="fragment_book_table"
         tools:layout="@layout/fragment_book_table" >
         <action
@@ -58,7 +58,7 @@
     </fragment>
     <fragment
         android:id="@+id/confirmInformationFragment"
-        android:name="com.expert.foodbd.ConfirmInformationFragment"
+        android:name="com.expert.foodbd.dining.fragments.ConfirmInformationFragment"
         android:label="fragment_confirm_information"
         tools:layout="@layout/fragment_confirm_information" />
 </navigation>

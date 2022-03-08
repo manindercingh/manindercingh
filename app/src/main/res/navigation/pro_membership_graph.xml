@@ -8,5 +8,18 @@
         android:id="@+id/proMembershipFragment"
         android:name="com.expert.foodbd.pro.fragments.ProMembershipFragment"
         android:label="fragment_pro_membership"
-        tools:layout="@layout/fragment_pro_membership" />
+        tools:layout="@layout/fragment_pro_membership" >
+        <action
+            android:id="@+id/action_proMembershipFragment_to_addPaymentMethodFragment"
+            app:destination="@id/addPaymentMethodFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPaymentMethodFragment"
+        android:name="com.expert.foodbd.AddPaymentMethodFragment"
+        android:label="fragment_add_payment_method"
+        tools:layout="@layout/fragment_add_payment_method" />
 </navigation>

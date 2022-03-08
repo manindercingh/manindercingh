@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.expert.foodbd.GroupModel
+import com.expert.foodbd.delivery.models.GroupModel
 import com.expert.foodbd.R
 import com.expert.foodbd.databinding.LayoutPopularFoodNearbyBinding
 

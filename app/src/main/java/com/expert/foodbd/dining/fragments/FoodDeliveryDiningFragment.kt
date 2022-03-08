@@ -1,6 +1,5 @@
-package com.expert.foodbd
+package com.expert.foodbd.dining.fragments
 
-import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.os.Bundle
 import android.util.Log
@@ -8,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.expert.foodbd.delivery.models.GroupModel
+import com.expert.foodbd.R
 import com.expert.foodbd.databinding.FragmentFoodDeliveryDiningBinding
 import com.expert.foodbd.dining.adapters.CustomTabLayoutAdapter
 import com.expert.foodbd.dining.adapters.RestaurantDialogMenuAdapter
@@ -52,6 +53,7 @@ class FoodDeliveryDiningFragment : Fragment(), CustomTabLayoutAdapter.Click,
                 binding.icDining.visibility = View.VISIBLE
                 binding.icClose.visibility = View.GONE
                 binding.rlFadedDialog.visibility = View.GONE
+
             }
         }
 

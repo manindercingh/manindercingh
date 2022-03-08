@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.expert.foodbd.GroupModel
+import com.expert.foodbd.delivery.models.GroupModel
 import com.expert.foodbd.databinding.LayoutSelectExtraOptionsBinding
 import java.util.*
 

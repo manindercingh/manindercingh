@@ -43,6 +43,7 @@ class MyProfileFragment : Fragment() {
 
         }
 
+        binding.imgBack.setOnClickListener { requireActivity().onBackPressed() }
 
     }
 

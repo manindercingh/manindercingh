@@ -9,11 +9,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import com.expert.foodbd.GroupModel
 import com.expert.foodbd.R
 import com.expert.foodbd.databinding.FragmentViewAllListBinding
 import com.expert.foodbd.delivery.adapters.PopularFoodNearbyAdaptersInFragment
 import com.expert.foodbd.delivery.adapters.RestaurantNearbyActivityAdapters
+import com.expert.foodbd.delivery.models.GroupModel
 import com.expert.foodbd.utils.CompanionClass
 import org.json.JSONArray
 import org.json.JSONException
@@ -46,56 +46,49 @@ class ViewAllListFragment : Fragment() {
 
     private fun setClicks() {
 
-        binding.imgBack.setOnClickListener {
-            CompanionClass.restaurant = ""
-            CompanionClass.food = ""
-            CompanionClass.home = ""
-            CompanionClass.dishDetails = ""
-            Log.i("data", "CLEARED")
-            requireActivity().onBackPressed()
-        }
+        binding.imgBack.setOnClickListener { requireActivity().onBackPressed() }
 
     }
 
-        private fun addItemsFromJSON() {
-            try {
-                val jsonDataString = readJSONDataFromFile()
-                val jsonArray = JSONArray(jsonDataString)
-                for (i in 0 until jsonArray.length()) {
-                    val itemObj = jsonArray.getJSONObject(i)
-                    val id = itemObj.getInt("id")
-                    val price = itemObj.getInt("price")
-                    val name = itemObj.getString("name")
-                    val groupModel = GroupModel(id, name, price)
-                    viewItems.add(i, groupModel);
+    private fun addItemsFromJSON() {
+        try {
+            val jsonDataString = readJSONDataFromFile()
+            val jsonArray = JSONArray(jsonDataString)
+            for (i in 0 until jsonArray.length()) {
+                val itemObj = jsonArray.getJSONObject(i)
+                val id = itemObj.getInt("id")
+                val price = itemObj.getInt("price")
+                val name = itemObj.getString("name")
+                val groupModel = GroupModel(id, name, price)
+                viewItems.add(i, groupModel);
 
-                }
-
-            } catch (e: JSONException) {
-                Log.d(ContentValues.TAG, "addItemsFromJSON: ", e)
-            } catch (e: IOException) {
-                Log.d(ContentValues.TAG, "addItemsFromJSON: ", e)
             }
-        }
 
-        @Throws(IOException::class)
-        private fun readJSONDataFromFile(): String {
-            var inputStream: InputStream? = null
-            val builder = StringBuilder()
-            try {
-                var jsonString: String?
-                inputStream = resources.openRawResource(R.raw.fooddatatoshow)
-                val bufferedReader = BufferedReader(
-                    InputStreamReader(inputStream, "UTF-8")
-                )
-                while (bufferedReader.readLine().also { jsonString = it } != null) {
-                    builder.append(jsonString)
-                }
-            } finally {
-                inputStream?.close()
-            }
-            return String(builder)
+        } catch (e: JSONException) {
+            Log.d(ContentValues.TAG, "addItemsFromJSON: ", e)
+        } catch (e: IOException) {
+            Log.d(ContentValues.TAG, "addItemsFromJSON: ", e)
         }
+    }
+
+    @Throws(IOException::class)
+    private fun readJSONDataFromFile(): String {
+        var inputStream: InputStream? = null
+        val builder = StringBuilder()
+        try {
+            var jsonString: String?
+            inputStream = resources.openRawResource(R.raw.fooddatatoshow)
+            val bufferedReader = BufferedReader(
+                InputStreamReader(inputStream, "UTF-8")
+            )
+            while (bufferedReader.readLine().also { jsonString = it } != null) {
+                builder.append(jsonString)
+            }
+        } finally {
+            inputStream?.close()
+        }
+        return String(builder)
+    }
 
     private fun onBackButtonPressed() {
         binding.root.isFocusableInTouchMode = true

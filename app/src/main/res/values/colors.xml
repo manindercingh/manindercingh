@@ -14,4 +14,5 @@
     <color name="green">#499e49</color>
     <color name="ripple_color">#9EB4E4</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="colorDivider">#ECECEC</color>
 </resources>

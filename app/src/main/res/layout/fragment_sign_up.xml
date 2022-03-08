@@ -82,7 +82,6 @@
                 android:layout_marginHorizontal="15dp"
                 android:layout_marginTop="7dp"
                 android:background="@drawable/edt_background"
-                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                 android:hint="Enter Name"
                 android:paddingVertical="5dp"
                 android:paddingStart="15dp" />
@@ -120,7 +119,7 @@
             </RelativeLayout>
 
             <EditText
-                android:id="@+id/edtEmail"
+                android:id="@+id/edtPhone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="15dp"
@@ -133,67 +132,67 @@
                 android:paddingStart="15dp" />
 
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="15dp"
-                android:layout_marginTop="10dp">
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="15dp"-->
+<!--                android:layout_marginTop="10dp">-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Password"
-                    android:textColor="@color/black"
-                    android:textSize="17sp"
-                    android:textStyle="bold" />
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Password"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="17sp"-->
+<!--                    android:textStyle="bold" />-->
 
-                <TextView
-                    android:id="@+id/txtError"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="3dp"
-                    android:layout_marginEnd="15dp"
-                    android:drawablePadding="5dp"
-                    android:text="more than 8 characters"
-                    android:textColor="@color/red"
-                    android:textSize="12sp"
-                    android:visibility="gone"
-                    app:drawableEndCompat="@drawable/ic_baseline_error_24" />
+<!--                <TextView-->
+<!--                    android:id="@+id/txtError"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:layout_gravity="end"-->
+<!--                    android:layout_marginTop="3dp"-->
+<!--                    android:layout_marginEnd="15dp"-->
+<!--                    android:drawablePadding="5dp"-->
+<!--                    android:text="more than 8 characters"-->
+<!--                    android:textColor="@color/red"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:visibility="gone"-->
+<!--                    app:drawableEndCompat="@drawable/ic_baseline_error_24" />-->
 
-            </RelativeLayout>
+<!--            </RelativeLayout>-->
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="15dp"
-                android:background="@drawable/edt_background">
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="15dp"-->
+<!--                android:background="@drawable/edt_background">-->
 
-                <EditText
-                    android:id="@+id/edtPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginTop="7dp"
-                    android:layout_toStartOf="@id/imgEye"
-                    android:background="@android:color/transparent"
-                    android:gravity="center_vertical"
-                    android:hint="Enter Password"
-                    android:inputType="textWebPassword"
-                    android:paddingVertical="5dp"
-                    android:paddingStart="15dp" />
+<!--                <EditText-->
+<!--                    android:id="@+id/edtPassword"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:layout_marginTop="7dp"-->
+<!--                    android:layout_toStartOf="@id/imgEye"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:hint="Enter Password"-->
+<!--                    android:inputType="textWebPassword"-->
+<!--                    android:paddingVertical="5dp"-->
+<!--                    android:paddingStart="15dp" />-->
 
-                <ImageView
-                    android:id="@+id/imgEye"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:padding="5dp"
-                    android:src="@drawable/ic_eye" />
+<!--                <ImageView-->
+<!--                    android:id="@+id/imgEye"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:src="@drawable/ic_eye" />-->
 
-            </RelativeLayout>
+<!--            </RelativeLayout>-->
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnCreate"
@@ -204,7 +203,7 @@
                 android:layout_marginBottom="3dp"
                 android:background="@drawable/bg_button"
                 android:gravity="center"
-                android:text="Create Account"
+                android:text="Send OTP"
                 android:textAllCaps="false"
                 android:textColor="@color/white" />
 
@@ -219,7 +218,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Already have an Account ?"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
